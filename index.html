@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Category Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>News Category Prediction</h1>
+        <form method="POST" action="/predict">
+            <textarea name="text" rows="4" placeholder="Enter news article text here..." required>{{ text if text else '' }}</textarea>
+            <button type="submit">Predict Category</button>
+        </form>
+        {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

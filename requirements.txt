@@ -1,0 +1,5 @@
+fastai
+flask
+gunicorn
+google-cloud-storage
+
